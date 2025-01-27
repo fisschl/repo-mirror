@@ -3,6 +3,8 @@ import StarterKit from "@tiptap/starter-kit";
 import { EditorContent, useEditor } from "@tiptap/vue-3";
 import { ref } from "vue";
 import "../assets/tiptap.css";
+import Highlight from "@tiptap/extension-highlight";
+import Link from "@tiptap/extension-link";
 
 const content = ref(
   `
@@ -18,8 +20,10 @@ const content = ref(
           </li>
           <li>
             … or two list items.
+             has support for links to the whole <a href="https://en.wikipedia.org/wiki/World_Wide_Web">world wide web</a>. We tested a lot of URLs and I think you can add *every URL* you want. Isn’t that cool? Let’s try <a href="https://statamic.com/">another one!</a> Yep, seems 
           </li>
         </ul>
+          <p><mark>But that one is.</mark></p>
         <p>
           Isn't that great? And all of that is editable. But wait, there's more. Let's try a code block:
         </p>
@@ -39,7 +43,7 @@ const content = ref(
 
 const editor = useEditor({
   content: content.value,
-  extensions: [StarterKit],
+  extensions: [StarterKit, Highlight, Link],
 });
 </script>
 
@@ -74,12 +78,6 @@ const editor = useEditor({
           :class="{ 'is-active': editor?.isActive('code') }"
         >
           Code
-        </button>
-        <button @click="editor?.chain().focus().unsetAllMarks().run()">
-          Clear marks
-        </button>
-        <button @click="editor?.chain().focus().clearNodes().run()">
-          Clear nodes
         </button>
         <button
           @click="editor?.chain().focus().setParagraph().run()"
@@ -159,4 +157,24 @@ const editor = useEditor({
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  padding: 3px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.button-group button.is-active {
+  background-color: #000;
+  color: #fff;
+}
+</style>

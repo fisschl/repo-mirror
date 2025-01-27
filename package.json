@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tiptap/extension-highlight": "^2.11.3",
+    "@tiptap/extension-link": "^2.11.3",
     "@tiptap/extension-list-item": "^2.11.3",
     "@tiptap/starter-kit": "^2.11.3",
     "@tiptap/vue-3": "^2.11.2",
