@@ -1,25 +1,18 @@
 {
-  "name": "tiptap",
-  "version": "0.0.0",
+  "name": "repo-mirror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "tsx index.ts"
   },
+  "packageManager": "pnpm@10.7.1",
   "dependencies": {
-    "@tiptap/extension-highlight": "^2.11.3",
-    "@tiptap/extension-link": "^2.11.3",
-    "@tiptap/extension-list-item": "^2.11.3",
-    "@tiptap/starter-kit": "^2.11.3",
-    "@tiptap/vue-3": "^2.11.2",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/tsconfig": "^0.7.0",
-    "typescript": "^5.6.2",
-    "vite": "^6.0.5",
-    "vue": "^3.5.13"
+    "execa": "^9.5.2",
+    "tsx": "^4.19.3"
   },
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "@types/node": "^22.14.1"
   }
 }

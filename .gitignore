@@ -1,24 +1,38 @@
-# Logs
-logs
+# Node.js
+node_modules/
+dist/
+build/
+.env
+.env.*
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+*.sublime-workspace
+*.sublime-project
+.idea/
+.vscode/
+coverage/
+.nyc_output/
+*.tgz
+*.tsbuildinfo
+.eslintcache
+.cache/
+output/
+logs/
 
-.vscode
+# Optional: OS-specific
+Thumbs.db
+Desktop.ini
+
+# Optional: Mac
+.AppleDouble
+.LSOverride
+Icon?
+
+# Optional: test output
+/jest-test-results.json
+
+config.json
